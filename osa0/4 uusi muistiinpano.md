@@ -1,3 +1,4 @@
+Sequence diagram of events when user clicks on submit button on page https://studies.cs.helsinki.fi/exampleapp/notes
 ```mermaid
 sequenceDiagram
     participant browser
