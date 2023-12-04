@@ -6,8 +6,8 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note left of server: the server adds the note from POST request body to list of notes
-    server-->>browser: uudelleenohjaus sivulle https://studies.cs.helsinki.fi/exampleapp/notes
+    Note left of server: the server adds the note from POST request body and current date to list of notes
+    server-->>browser: redirect browser to https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
