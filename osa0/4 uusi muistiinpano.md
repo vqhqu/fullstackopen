@@ -5,7 +5,7 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note right of browser: the server adds the note from POST request body to list of notes
+    Note left of server: the server adds the note from POST request body to list of notes
     server-->>browser: uudelleenohjaus sivulle https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server
 
