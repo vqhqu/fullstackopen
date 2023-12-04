@@ -4,19 +4,20 @@
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser uudelleenohjaus sivulle https://studies.cs.helsinki.fi/exampleapp/notes
+    server-->>browser: uudelleenohjaus sivulle https://studies.cs.helsinki.fi/exampleapp/notes
     deactivate server
-    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/notes
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
-    server-->>browser html notes document
+    server-->>browser: html notes document
     deactivate server
-    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser main.css
+    server-->>browser: main.css
     deactivate server
-    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate server
-    server-->>browser main.js
+    server-->>browser: main.js
     deactivate server
     Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
     
